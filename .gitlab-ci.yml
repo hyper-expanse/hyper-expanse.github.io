@@ -1,0 +1,25 @@
+image: jojomi/hugo:latest
+
+stages:
+  - build
+  - publish
+
+build:
+  artifacts:
+    paths:
+      - public/
+  script:
+    - hugo
+  stage: build
+
+pages:
+  artifacts:
+    paths:
+      - public
+  dependencies:
+    - build
+  only:
+    - master@hutson/hutson.gitlab.io
+  stage: publish
+  script:
+    - echo "Already built"
