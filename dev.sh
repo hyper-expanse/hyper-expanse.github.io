@@ -1,1 +1,1 @@
-docker run --rm --volume "$(pwd)":/app --workdir /app --interactive --tty jojomi/hugo:latest sh -c "hugo; bash"
+docker run --rm --volume "$(pwd)":/home/hugo --disable-content-trust --interactive --tty registry.gitlab.com/hyper-expanse/docker-hugo:latest sh -c "hugo; sh"
