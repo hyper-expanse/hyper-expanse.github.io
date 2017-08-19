@@ -1,4 +1,4 @@
-image: jojomi/hugo:latest
+image: registry.gitlab.com/hyper-expanse/docker-hugo:latest
 
 stages:
   - build
@@ -15,7 +15,7 @@ build:
 pages:
   artifacts:
     paths:
-      - public
+      - public/
   dependencies:
     - build
   only:
