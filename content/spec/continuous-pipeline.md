@@ -6,24 +6,25 @@ draft: true
 
 Applying the concepts of _Continuous Integration_, _Continuous Delivery_, _Continuous Deployment_, and _Continuous Release_ to shipping code in the Node/npm ecosystem.
 
-<!--more-->
-
 ## Continuous Integration
+
+> The practice of continuously integrating work into a shared SCM branch that is subsequently built. May also be further built upon by building changes in separate branches, and on successfully passing the project's requirements, integrated into the project's shared SCM branch.
 
 ## Continuous Delivery
 
-### Implementation Notes
-
 When creating a deliverable, we need to do the following:
-* Determine the next appropriate version to release based on unreleased commits.
-* Tag the working directory with a new git tag.
+* Determine the next appropriate version to release based on unreleased changes (Such as git commit).
+* Tag the working directory with a new unique idenfitier (Such as a git tag).
 * Generate, and post, release notes of changes included in the new release.
 
-```bash
-semantic-release-gitlab
-```
+Tools for creating a deliverable:
+* [`semantic-release-gitlab`](https://www.npmjs.com/package/semantic-release-gitlab)
+* [`semantic-release-github`](https://www.npmjs.com/package/semantic-release-github)
+* [`semantic-release`](https://www.npmjs.com/package/semantic-release)
+* [`semantic-release-app`](https://github.com/tunnckoCore/semantic-release-app) - A GitHub [app](https://developer.github.com/apps/).
+* _No app support exists in GitLab_
 
-Once release notes have been generated on the project's SCM platform, we ned to generate publishable artifacts:
+Once release notes have been generated on the project's SCM platform we ned to generate publishable artifacts:
 
 **Node/npm**
 ```bash
@@ -37,6 +38,8 @@ npm pack
 # ?
 ```
 
+> Generates ?
+
 Post it to the release notes for the given version release on SCM platform:
 
 ```bash
@@ -45,9 +48,11 @@ upload-artifact-to-[gitlab/github/etc.] --version=CURRENT_GIT_TAG --file=<FILE N
 
 > `upload-artifact-to-gitlab` does not currently exist.
 
+Once a deliverable has been published to the project's SCM platform the next step is to deploy it to a production-like environment in the _Continuous Deployment_ stage.
+
 ## Continuous Deployment
 
-### Implementation Notes
+> The practice of deploying a deliverable built during the _Continuous Delivery_ stage into a production-like environment for load testing prior to releasing the deployment to accept production traffic under a [Blue/Green](https://martinfowler.com/bliki/BlueGreenDeployment.html) scheme.
 
 Publishing the tagged package to an npm-compatible registry using the build artifact that was uploaded to the release notes for the given version:
 
