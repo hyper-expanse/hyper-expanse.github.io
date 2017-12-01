@@ -10,6 +10,10 @@ Applying the concepts of _Continuous Integration_, _Continuous Delivery_, _Conti
 
 > The practice of continuously integrating work into a shared SCM branch that is subsequently built. May also be further built upon by building changes in separate branches, and on successfully passing the project's requirements, integrated into the project's shared SCM branch.
 
+Continuous Integration platforms include:
+* [GitLab CI](https://about.gitlab.com/features/gitlab-ci-cd/)
+* [CircleCI](https://circleci.com/)
+
 ## Continuous Delivery
 
 When creating a deliverable, we need to do the following:
@@ -86,12 +90,14 @@ post-notices-to-[gitlab/github/etc.] --stage=deployment --version=CURRENT_GIT_TA
 
 ## Continuous Release
 
-### npm Example
+> The practice of switching production traffic to the previously deployed deliverable. This may include setting libraries as `latest` for installation by package managers, or having all new requests to a service begin going to the newly deployed service.
+
+**Node/npm**
 
 Update npm-compatible registry state to point `latest` dist-tag to the latest version of package ready for general release.
 
 ```bash
-npm
+npm dist-tag add <package>@<version> latest
 ```
 
 Next, once the deployment has been _released_, we need to notify consumers of the general availability of the deployment:
