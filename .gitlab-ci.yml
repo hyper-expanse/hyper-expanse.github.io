@@ -1,25 +1,13 @@
-image: registry.gitlab.com/hyper-expanse/docker-hugo:latest
+image: jojomi/hugo:latest
 
-stages:
-  - build
-  - publish
-
-build:
-  artifacts:
-    paths:
-      - public/
-  script:
-    - hugo
-  stage: build
+variables:
+  HUGO_DESTINATION: public
 
 pages:
   artifacts:
     paths:
       - public/
-  dependencies:
-    - build
   only:
-    - master@hutson/hutson.gitlab.io
-  stage: publish
+    - master
   script:
-    - echo "Already built"
+    - hugo
