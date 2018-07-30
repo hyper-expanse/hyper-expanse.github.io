@@ -1,6 +1,6 @@
 # Developer Certificate of Origin
 
-All contributors MUST certify they are able and willing to provide their contributions under the terms of a project's license by signing off to a [_Developer Certificate of Origin_](https://developercertificate.org/) (Version 1.1).
+All contributors MUST certify they are able and willing to provide their contributions under the terms of a project's license by signing off on a [_Developer Certificate of Origin_](https://developercertificate.org/) (Version 1.1).
 
 For a contributor to certify their ability, and willingness, to meet the requirements of the _Developer Certificate of Origin_, the following line must be included as the last line of a commit message for every commit contributed:
 
@@ -8,13 +8,19 @@ For a contributor to certify their ability, and willingness, to meet the require
 Signed-off-by: FirstName LastName <email@example.org>
 ```
 
-To append the `Signed-off-by` line automatically, pass the `-s`, or `--signoff`, flag to `git commit`. Git will use the name and e-mail address configured in your Git configuration file to automatically append the line to the commit message.
+To append the `Signed-off-by` line automatically, pass the `-s`, or `--signoff`, flag to `git commit`:
+
+```bash
+git commit --signoff
+```
+
+Git will use the name and e-mail address configured in the Git configuration file to automatically append the line to the commit message.
 
 ## DCO Sign-off On Every Contribution
 
-A DCO sign-off MUST be acquired on every contribution.
+A DCO sign-off MUST be appended to every commit contained in a contribution.
 
-A sign-off ensures the contributor has agreed to submit their contribution under the terms of the project's license.
+An explicit sign-off is an indication that the contributor has read the DCO and is able, and willing, to provide their contributions under the terms of the project's license.
 
 ### Sign-off Implicit for Some
 
@@ -24,7 +30,7 @@ Some organizations have chosen to make the sign-off process implicit.
 
 ### Apache-2.0 Has That Requirement Already
 
-> This section only applies if you are using the Apache-2.0 license for your project.
+> This section only applies if a project is using the Apache-2.0 license.
 
 While the [Apache-2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html) has _Clause 5_ that states a contribution, unless stated otherwise, `shall be under the terms and conditions of this License`, it's not apparent that the contribution triggers that clause, or otherwise triggers the license [CITATION NEEDED].
 
