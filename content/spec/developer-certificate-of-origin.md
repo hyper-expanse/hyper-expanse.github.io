@@ -32,14 +32,15 @@ Some organizations have chosen to make the sign-off process implicit.
 
 > This section only applies if a project is using the Apache-2.0 license.
 
-While the [Apache-2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html) has _Clause 5_ that states a contribution, unless stated otherwise, `shall be under the terms and conditions of this License`, it's not apparent that the contribution triggers that clause, or otherwise triggers the license [CITATION NEEDED].
+While the [Apache-2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html) has _Clause 5_, which states a contribution, unless stated otherwise, `shall be under the terms and conditions of this License`, it's not apparent that the contribution triggers that clause, or otherwise triggers the license [CITATION NEEDED].
 
-An explicit sign-off also protects the project by ensuring there's evidence that a contributor agreed to license their contribution under the terms of the project's license [2].
+The explicit sign-off protects the project by ensuring there's evidence a contributor agreed to make their contribution under the terms of the project's license [2][3].
 
 ## Other Users of DCO
 
 1. [Eclipse Foundation](https://www.eclipse.org/legal/DCO.php).
 2. [Linux Kernel](https://elinux.org/Developer_Certificate_Of_Origin).
+3. [The most powerful contributor agreement](https://lwn.net/Articles/592503/)
 
 ## References
 
