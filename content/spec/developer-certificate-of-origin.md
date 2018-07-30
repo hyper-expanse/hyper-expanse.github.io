@@ -8,7 +8,15 @@ A DCO sign-off MUST be acquired on every contribution.
 
 A sign-off ensures the contributor has agreed to submit their contribution under the terms of the project's license.
 
+### Sign-off Implicit for Some
+
+Some organizations have chosen to make the sign-off process implicit.
+
+1. [GitLab has taken the stance](https://gitlab.com/gitlab-org/gitlab-ce/issues/43293#note_90822944) that the act of submitting a contribution is acknowledgement of the DCO.
+
 ### Apache-2.0 Has That Requirement Already
+
+> This section only applies if you are using the Apache-2.0 license for your project.
 
 While the [Apache-2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html) has _Clause 5_ that states a contribution, unless stated otherwise, `shall be under the terms and conditions of this License`, it's not apparent that the contribution triggers that clause, or otherwise triggers the license [CITATION NEEDED].
 
