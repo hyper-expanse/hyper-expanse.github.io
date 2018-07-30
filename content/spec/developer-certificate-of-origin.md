@@ -1,6 +1,14 @@
 # Developer Certificate of Origin
 
-All contributors MUST certify they are able and willing to contribute under the terms of a project's license by signing off to a [_Developer Certificate of Origin_](https://developercertificate.org/).
+All contributors MUST certify they are able and willing to provide their contributions under the terms of a project's license by signing off to a [_Developer Certificate of Origin_](https://developercertificate.org/) (Version 1.1).
+
+For a contributor to certify their ability, and willingness, to meet the requirements of the _Developer Certificate of Origin_, the following line must be included as the last line of a commit message for every commit contributed:
+
+```
+Signed-off-by: FirstName LastName <email@example.org>
+```
+
+To append the `Signed-off-by` line automatically, pass the `-s`, or `--signoff`, flag to `git commit`. Git will use the name and e-mail address configured in your Git configuration file to automatically append the line to the commit message.
 
 ## DCO Sign-off On Every Contribution
 
