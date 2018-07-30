@@ -22,7 +22,12 @@ While the [Apache-2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html)
 
 An explicit sign-off also protects the project by ensuring there's evidence that a contributor agreed to license their contribution under the terms of the project's license [2].
 
-## Resources
+## Other Users of DCO
+
+1. [Eclipse Foundation](https://www.eclipse.org/legal/DCO.php).
+2. [Linux Kernel](https://elinux.org/Developer_Certificate_Of_Origin).
+
+## References
 
 1. [Developer Certificate](https://developercertificate.org/)
 2. [Intent to adopt the Apache License 2.0 for Scala](https://www.scala-lang.org/news/license-change.html)
