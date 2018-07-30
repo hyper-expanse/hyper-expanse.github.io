@@ -38,11 +38,12 @@ The explicit sign-off protects the project by ensuring there's evidence a contri
 
 ## Other Users of DCO
 
-1. [Eclipse Foundation](https://www.eclipse.org/legal/DCO.php).
-2. [Linux Kernel](https://elinux.org/Developer_Certificate_Of_Origin).
-3. [The most powerful contributor agreement](https://lwn.net/Articles/592503/)
+- [Eclipse Foundation](https://www.eclipse.org/legal/DCO.php).
+- [Linux Kernel](https://elinux.org/Developer_Certificate_Of_Origin).
+- [GitLab](https://about.gitlab.com/press/releases/2017-11-01-gitlab-transitions-contributor-license.html)
 
 ## References
 
 1. [Developer Certificate](https://developercertificate.org/)
 2. [Intent to adopt the Apache License 2.0 for Scala](https://www.scala-lang.org/news/license-change.html)
+3. [The most powerful contributor agreement](https://lwn.net/Articles/592503/)
