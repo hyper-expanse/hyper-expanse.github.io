@@ -12,6 +12,8 @@ Each label MUST consist of two parts, the category to which the label belongs, M
 
 To separate the parts use `:<space>`, where there is a space after `:`.
 
+A colon, `:`, MUST NOT be used elsewhere in a label.
+
 Example: `type: defect`
 
 In this example, `type` is the category, while `defect` is the additional metadata.
@@ -20,31 +22,27 @@ In this example, `type` is the category, while `defect` is the additional metada
 
 Categories are broad themes in which metadata bucketed into. Separating labels into categories lowers the barrier to discoverability (if you know the general theme of the metadata you want, you can filter based on the category).
 
-Categories MAY include the following:
+Categories MUST NOT be abbreviated. Abbreviations can lead to ambiguity and discoverability issues.
+
+A category MUST NOT conflict with the intention of an existing category in the list above.
+
+A few examples of what a category could be named, and how it might be described:
 - `environment`: Indication of the deployment environment for a product.
 - `priority`: Importance of the issue tagged with the label in relation to other issues.
 - `status`: Current state of the task tracked by the tagged issue.
 - `type`: The expected results of the tagged issue, such as whether a discussion is to take place, or a product enhancement is desired.
 
-Categories MUST NOT be abbreviated. Abbreviations can lead to ambiguity and discoverability issues.
-
-In addition to these categories, other categories MAY be used, but a category MUST NOT conflict with the intention of an existing category in the list above.
-
 ## Additional Human-understandable Metadata
 
-Content after the separator.
-
-### Format
+_Additional Human-understandable Metadata_ is all content after the category and separator.
 
 Content after the category and separator MUST be understandable on its own, without additional context or training.
 
 Example: `type: 0` where `0` is understood, by convention, or other documentation, to be a bug.
 
-In this example, `0` is not accessible to a member of the community, or third-party contributor, who is not familiar with the existing convention, or who has read a project’s other documentation that lays out the convention.
+In this example, `0` is not accessible to a member of the community, or third-party contributor, who is not familiar with the existing convention, or who has not read a project’s contributing documentation that lays out the convention.
 
 Instead, use `defect` or `bug`, which are complete English words that communicate meaning on their own.
-
-### Content
 
 Beyond the expectation that the metadata MUST be understandable, no other expectations are placed on what may be used.
 
@@ -52,7 +50,7 @@ Beyond the expectation that the metadata MUST be understandable, no other expect
 
 Labels MAY have a description attached to provide guidance on the proper use of the label.
 
-A description MUST NOT be used to convey meaning of the additional metadata, as the additional metadata MUST be able to stand on its own as described in the section above.
+A description MUST NOT be used solely to convey meaning of the additional metadata, as the additional metadata MUST be able to stand on its own as described in the section above.
 
 Descriptions MUST be complete sentences. Capitalized, with a period at the end.
 
@@ -60,6 +58,10 @@ Complete, properly formatted, sentences afford easier reading.
 
 ## Color
 
-Display color for a label MUST NOT be used to convey information, though they MAY be used for the sake of being used.
+Display color for a label MUST NOT be used to convey information, though they MAY still be used if desired.
 
-Colors are a disadvantage for those using improperly calibrated screens, or those with a color vision deficiency.
+Information that is only conveyed through color is a disadvantage for those using an improperly calibrated computer screen, or those with a color vision deficiency.
+
+# Terminology
+
+The key words _MUST_, _MUST NOT_, _REQUIRED_, _SHALL_, _SHALL NOT_, _SHOULD_, _SHOULD NOT_, _RECOMMENDED_, _MAY_, and _OPTIONAL_ in this document are to be interpreted as described in [RFC 21191](https://tools.ietf.org/html/rfc2119).
