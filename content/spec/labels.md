@@ -24,13 +24,9 @@ Categories are broad themes in which metadata bucketed into. Separating labels i
 
 Categories MUST NOT be abbreviated. Abbreviations can lead to ambiguity and discoverability issues.
 
-A category MUST NOT conflict with the intention of an existing category in the list above.
+Categories MUST be complete English words, and they MUST be understandable on its own, without additional context or training.
 
-A few examples of what a category could be named, and how it might be described:
-- `environment`: Indication of the deployment environment for a product.
-- `priority`: Importance of the issue tagged with the label in relation to other issues.
-- `status`: Current state of the task tracked by the tagged issue.
-- `type`: The expected results of the tagged issue, such as whether a discussion is to take place, or a product enhancement is desired.
+A category MUST NOT conflict with the intention of an existing category in the list above.
 
 ## Additional Human-understandable Metadata
 
@@ -44,13 +40,11 @@ In this example, `0` is not accessible to a member of the community, or third-pa
 
 Instead, use `defect` or `bug`, which are complete English words that communicate meaning on their own.
 
-Beyond the expectation that the metadata MUST be understandable, no other expectations are placed on what may be used.
-
 ## Description
 
 Labels MAY have a description attached to provide guidance on the proper use of the label.
 
-A description MUST NOT be used solely to convey meaning of the additional metadata, as the additional metadata MUST be able to stand on its own as described in the section above.
+A description MUST NOT be used as the sole way to convey meaning of the additional metadata, as the additional metadata MUST be able to stand on its own as described in the section above.
 
 Descriptions MUST be complete sentences. Capitalized, with a period at the end.
 
