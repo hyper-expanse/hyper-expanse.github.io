@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<div id="profile" class="container">
+  <div id="summary">
+    <img src="/images/{{ .Params.picture }}" alt="Profile picture of {{ .Title }}" width="150px" height="150px">
+    <h1>{{ .Params.title }}</h1>
+    {{ .Params.bio | markdownify }}
+  </div>
+  <div class="social_media">
+    
+  </div>
+  <div class="detail">
+    {{ .Content | markdownify }}
+  </div>
+</div>
+
+{{ end }}

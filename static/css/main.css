@@ -11,3 +11,23 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
 }
+
+#profile {
+  margin-top:10%;
+  width: 600px;
+}
+
+#profile img {
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+}
+
+#profile .social_media {
+  clear:both;
+  margin-top: 50px;
+}
+
+#profile .detail {
+  margin-top: 50px;
+}
