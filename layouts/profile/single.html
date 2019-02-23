@@ -7,7 +7,21 @@
     {{ .Params.bio | markdownify }}
   </div>
   <div class="social_media">
-    
+    {{ if .Params.gitlab }}<a href="https://gitlab.com/{{ .Params.gitlab }}"><button type="button"
+        class="btn btn-outline-info">gitlab</button></a>{{ end }}
+    {{ if .Params.github }}<a href="https://github.com/{{ .Params.github }}"><button type="button"
+        class="btn btn-outline-info">github</button></a>{{ end }}
+    {{ if .Params.npm }}<a href="https://www.npmjs.com/~{{ .Params.npm }}"><button type="button"
+        class="btn btn-outline-info">npm</button></a>{{ end }}
+    {{ if .Params.pypi }}<a href="https://pypi.org/user/{{ .Params.pypi }}"><button type="button"
+        class="btn btn-outline-info">pypi</button></a>{{ end }}
+    {{ if .Params.bintray }}<a href="https://bintray.com/{{ .Params.bintray }}"><button type="button"
+        class="btn btn-outline-info">bintray</button></a>{{ end }}
+    {{ if .Params.linkedin }}<a href="https://www.linkedin.com/in/{{ .Params.linkedin }}"><button type="button"
+        class="btn btn-outline-info">linkedin</button></a>{{ end }}
+    {{ if .Params.opencollective }}<a href="https://opencollective.com/{{ .Params.opencollective }}"><button
+        type="button" class="btn btn-outline-info">open
+        collective</button></a>{{ end }}
   </div>
   <div class="detail">
     {{ .Content | markdownify }}
