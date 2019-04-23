@@ -7,7 +7,6 @@ gitlab: hutson
 github: hutson
 npm: hutson
 pypi: hutson
-bintray: hutson
 linkedin: hutson-betts-78420247
 opencollective: hutson
 ---
