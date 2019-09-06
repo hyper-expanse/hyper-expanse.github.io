@@ -1,6 +1,5 @@
 ---
 title: "Continuous Pipeline"
-date: 2017-07-23T20:38:03-05:00
 draft: true
 ---
 

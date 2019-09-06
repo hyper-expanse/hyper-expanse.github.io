@@ -1,3 +1,8 @@
+---
+title: "Labels"
+draft: true
+---
+
 # Labels
 
 Many source control platforms, such as GitHub and GitLab, have limited issue tracking capabilities, usually leaving you with nothing more than the ability to assign an issue to a milestone, assign the issue to one or more individuals, and lastly, to attach one or more labels.
@@ -10,11 +15,11 @@ Using a consistent set of labels lowers the barriers to members of a community t
 
 Each label MUST consist of two parts, the category to which the label belongs, MUST be the first part. The last part MUST be a string consisting of additional human-understandable metadata.
 
-To separate the parts use `:<space>`, where there is a space after `:`.
+To separate the parts use `::<space>`, where there is a space after `::`.
 
-A colon, `:`, MUST NOT be used elsewhere in a label.
+A colon, `::`, MUST NOT be used elsewhere in a label.
 
-Example: `type: defect`
+Example: `type::defect`
 
 In this example, `type` is the category, while `defect` is the additional metadata.
 
@@ -34,7 +39,7 @@ _Additional Human-understandable Metadata_ is all content after the category and
 
 Content after the category and separator MUST be understandable on its own, without additional context or training.
 
-Example: `type: 0` where `0` is understood, by convention, or other documentation, to be a bug.
+Example: `type::0` where `0` is understood, by convention, or other documentation, to be a bug.
 
 In this example, `0` is not accessible to a member of the community, or third-party contributor, who is not familiar with the existing convention, or who has not read a project’s contributing documentation that lays out the convention.
 

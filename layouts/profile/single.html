@@ -6,7 +6,7 @@
     <h1>{{ .Params.title }}</h1>
     {{ .Params.bio | markdownify }}
   </div>
-  <div class="social_media">
+  <div class="profile_links">
     {{ if .Params.gitlab }}<a href="https://gitlab.com/{{ .Params.gitlab }}"><button type="button"
         class="btn btn-outline-info">gitlab</button></a>{{ end }}
     {{ if .Params.github }}<a href="https://github.com/{{ .Params.github }}"><button type="button"

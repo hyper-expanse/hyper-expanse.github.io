@@ -1,3 +1,8 @@
+---
+title: "Developer Certificate of Origin"
+draft: true
+---
+
 # Developer Certificate of Origin
 
 All contributors MUST certify they are able and willing to provide their contributions under the terms of a project's license by signing off on a [_Developer Certificate of Origin_](https://developercertificate.org/) (Version 1.1).
