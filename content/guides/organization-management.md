@@ -1,6 +1,7 @@
 ---
-title: "GitHub Organization Management"
 draft: true
+title: "GitHub Organization Management"
+type: guide
 ---
 
 # GitHub Organization Management

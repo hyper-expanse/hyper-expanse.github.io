@@ -4,7 +4,7 @@ body {
 }
 
 #splash {
-  background-image: url('/images/logo.svg');
+  background-image: url('/images/logo.min.svg');
   background-position: center;
   background-size: 25% 25%;
   background-attachment: fixed;

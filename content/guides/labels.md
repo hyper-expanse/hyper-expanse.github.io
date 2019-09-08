@@ -1,6 +1,7 @@
 ---
-title: "Labels"
 draft: true
+title: "Labels"
+type: guide
 ---
 
 # Labels

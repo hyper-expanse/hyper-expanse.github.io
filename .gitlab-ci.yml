@@ -10,4 +10,4 @@ pages:
   only:
     - master
   script:
-    - hugo
+    - hugo --minify

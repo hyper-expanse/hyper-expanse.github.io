@@ -1,6 +1,7 @@
 ---
-title: "Developer Certificate of Origin"
 draft: true
+title: "Developer Certificate of Origin"
+type: guide
 ---
 
 # Developer Certificate of Origin
