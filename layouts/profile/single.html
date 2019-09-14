@@ -23,6 +23,14 @@
         type="button" class="btn btn-outline-info">open
         collective</button></a>{{ end }}
   </div>
+  <br/>
+  <h2>Guides</h2>
+  <p>{{ .Params.guides | markdownify}}</p>
+  <div class="list-group">
+    {{ range where (where .Site.Pages "Type" "guide") "Draft" false }}
+    <a class="list-group-item list-group-item-action" href="{{ .Permalink }}">{{ .Title }}</a>
+    {{ end }}
+  </div>
   <div class="detail">
     {{ .Content | markdownify }}
   </div>

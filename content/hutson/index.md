@@ -9,4 +9,5 @@ npm: hutson
 pypi: hutson
 linkedin: hutson-betts-78420247
 opencollective: hutson
+guides: "Guides I've written over the years based on working with Open Source Software."
 ---

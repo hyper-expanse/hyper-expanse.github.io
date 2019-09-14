@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "Developer Certificate of Origin"
 type: guide
 ---
