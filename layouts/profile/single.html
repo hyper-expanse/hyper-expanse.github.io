@@ -23,14 +23,25 @@
         type="button" class="btn btn-outline-info">open
         collective</button></a>{{ end }}
   </div>
-  <br/>
+  <br />
   <h2>Guides</h2>
-  <p>{{ .Params.guides | markdownify}}</p>
   <div class="list-group">
     {{ range where (where .Site.Pages "Type" "guide") "Draft" false }}
     <a class="list-group-item list-group-item-action" href="{{ .Permalink }}">{{ .Title }}</a>
     {{ end }}
   </div>
+  <br />
+  <h2>Publications</h2>
+  {{ range .Params.publications }}
+  <div class="card bg-light text-dark">
+    <div class="card-body">
+      <h5 class="card-title">{{ .title }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ .subtitle }}</h6>
+      <p class="card-text">{{ .description | markdownify }}</p>
+      <a href="{{ .shop }}" class="card-link">Buy</a>
+    </div>
+  </div>
+  {{ end }}
   <div class="detail">
     {{ .Content | markdownify }}
   </div>
