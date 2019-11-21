@@ -1,4 +1,4 @@
-image: jojomi/hugo:latest@sha256:2c88a0b35bf85045c6430abe9fde8c3b936c63acd900070b227e965632f73ce8
+image: jojomi/hugo:latest@sha256:cfc23010cde7a5af05794435e4d56a9fb70fff4bf7087835f749d72c3e3ab09b
 
 variables:
   HUGO_DESTINATION: public
