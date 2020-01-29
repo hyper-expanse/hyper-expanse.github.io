@@ -11,6 +11,8 @@
         class="btn btn-outline-info">gitlab</button></a>{{ end }}
     {{ if .Params.github }}<a href="https://github.com/{{ .Params.github }}"><button type="button"
         class="btn btn-outline-info">github</button></a>{{ end }}
+    {{ if .Params.framagit }}<a href="https://framagit.org/{{ .Params.framagit }}"><button type="button"
+          class="btn btn-outline-info">framagit</button></a>{{ end }}
     {{ if .Params.npm }}<a href="https://www.npmjs.com/~{{ .Params.npm }}"><button type="button"
         class="btn btn-outline-info">npm</button></a>{{ end }}
     {{ if .Params.pypi }}<a href="https://pypi.org/user/{{ .Params.pypi }}"><button type="button"
