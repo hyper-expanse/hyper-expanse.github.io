@@ -4,11 +4,11 @@ type: profile
 picture: hutson-profile.png
 bio: It's my passion to improve the software engineering experience through advocacy, guidance, and the development of automation tooling.
 github: hutson
-framagit: hutson
 npm: hutson
 pypi: hutson
 linkedin: hutson-betts-78420247
 opencollective: hutson
+liberapay: hutson
 publications:
   - title: Pepper and Carrot
     subtitle: Episodes 1 - 6
