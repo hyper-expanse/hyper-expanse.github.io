@@ -1,6 +1,28 @@
 body {
-  background-color: black;
+  background-color: #111215;
   color: white;
+  font-family: unset /* TODO: Remove once I remove Bootstrap. */
+}
+
+@media screen and (prefers-color-scheme: light) {
+	body {
+		background-color: white;
+		color: black
+	}
+}
+
+*, ::before, ::after {
+	border-sizing: border-box;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#guide {
+  margin-top: 40px;
+  width: 750px;
 }
 
 #splash {
@@ -13,7 +35,7 @@ body {
 }
 
 #profile {
-  margin-top:10%;
+  margin-top: 40px;
   width: 600px;
 }
 
@@ -24,10 +46,5 @@ body {
 }
 
 #profile .profile_links {
-  clear: both;
-  margin-top: 50px;
-}
-
-#profile .detail {
   margin-top: 50px;
 }

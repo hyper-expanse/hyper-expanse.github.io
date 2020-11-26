@@ -8,7 +8,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>{{ .Site.Title }}</title>
+  <title>{{ .Title }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="stylesheet" href="{{ $bootstrapStyle.Permalink }}" integrity="{{ $bootstrapStyle.Data.Integrity }}">
   <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
@@ -17,7 +17,7 @@
 
 <body>
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="">
+    <a class="navbar-brand" href="/">
       <img src="{{ $logo.Permalink }}" width="30" height="30" alt="hyper-expanse" class="d-inline-block align-top">
       {{ .Site.Title }}</a>
   </nav>
