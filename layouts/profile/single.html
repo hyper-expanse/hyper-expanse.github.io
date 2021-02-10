@@ -28,6 +28,22 @@
 
   <br />
 
+	<h2>Projects</h2>
+  {{ range .Params.projects }}
+  <div class="card bg-light text-dark">
+    <div class="card-header">
+      <h5 class="card-title">{{ .title }}</h5>
+    </div>
+    <div class="card-body">
+      <p class="card-text">{{ .description | markdownify }}</p>
+    </div>
+    <div class="card-footer">
+      <a href="{{ .repository }}"><button type="button" class="btn btn-primary btn-block">View Repository</button></a>
+    </div>
+  </div>
+	<br/>
+  {{ end }}
+
 	<h2>Guides</h2>
   <div class="list-group">
     {{ range where (where .Site.Pages "Type" "guide") "Draft" false }}

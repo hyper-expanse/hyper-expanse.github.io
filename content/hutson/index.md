@@ -9,6 +9,10 @@ pypi: hutson
 linkedin: hutson-betts-78420247
 opencollective: hutson
 liberapay: hutson
+projects:
+  - title: dotfiles
+    description: Personal shell scripts and development environment configuration files.
+    repository: https://github.com/hyper-expanse/dotfiles
 publications:
   - title: Pepper and Carrot
     subtitle: Episodes 1 - 6
