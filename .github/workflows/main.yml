@@ -3,23 +3,23 @@ name: Pages
 on:
   push:
     branches:
-    - source
+      - main
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@master
+      - uses: actions/checkout@v2.3.4
 
-    - name: Setup
-      uses: peaceiris/actions-hugo@v2.4.13
-      with:
-        hugo-version: '0.58.3'
+      - name: Setup
+        uses: peaceiris/actions-hugo@v2.4.13
+        with:
+          hugo-version: '0.80.0'
 
-    - name: Build
-      run: hugo --minify
+      - name: Build
+        run: hugo --minify
 
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3.7.3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.7.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
