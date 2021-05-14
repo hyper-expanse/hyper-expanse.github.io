@@ -13,6 +13,19 @@
   <link rel="stylesheet" href="{{ $bootstrapStyle.Permalink }}" integrity="{{ $bootstrapStyle.Data.Integrity }}">
   <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
   <link rel="icon" type="image/svg+xml" href="{{ $logo.Permalink }}">
+	<style>
+		body {
+		  background-color: #111215;
+		  color: white;
+		}
+
+		@media screen and (prefers-color-scheme: light) {
+			body {
+				background-color: white;
+				color: black;
+			}
+		}
+	</style>
 </head>
 
 <body>
