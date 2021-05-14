@@ -1,78 +1,65 @@
 {{ define "main" }}
 
-<div id="profile" class="container">
-  <div id="summary">
-    <img src="/images/{{ .Params.picture }}" alt="Profile picture of {{ .Title }}" width="150px" height="150px">
-    <h1>{{ .Params.title }}</h1>
-    {{ .Params.bio | markdownify }}
-  </div>
+<div id="profile">
+	<img src="/images/{{ .Params.picture }}" alt="Profile picture of {{ .Title }}" id="profile">
 
-  <div class="profile_links">
-    {{ if .Params.gitlab }}<a href="https://gitlab.com/{{ .Params.gitlab }}"><button type="button"
-        class="btn btn-outline-info">gitlab</button></a>{{ end }}
-    {{ if .Params.github }}<a href="https://github.com/{{ .Params.github }}"><button type="button"
-        class="btn btn-outline-info">github</button></a>{{ end }}
-    {{ if .Params.npm }}<a href="https://www.npmjs.com/~{{ .Params.npm }}"><button type="button"
-        class="btn btn-outline-info">npm</button></a>{{ end }}
-    {{ if .Params.pypi }}<a href="https://pypi.org/user/{{ .Params.pypi }}"><button type="button"
-        class="btn btn-outline-info">pypi</button></a>{{ end }}
-    {{ if .Params.bintray }}<a href="https://bintray.com/{{ .Params.bintray }}"><button type="button"
-        class="btn btn-outline-info">bintray</button></a>{{ end }}
-    {{ if .Params.linkedin }}<a href="https://www.linkedin.com/in/{{ .Params.linkedin }}"><button type="button"
-        class="btn btn-outline-info">linkedin</button></a>{{ end }}
-    {{ if .Params.opencollective }}<a href="https://opencollective.com/{{ .Params.opencollective }}"><button
-        type="button" class="btn btn-outline-info">open collective</button></a>{{ end }}
-    {{ if .Params.liberapay }}<a href="https://liberapay.com/{{ .Params.liberapay }}"><button type="button"
-        class="btn btn-outline-info">liberapay</button></a>{{ end }}
-  </div>
+	<h1>{{ .Params.title }}</h1>
 
-  <br />
+	<p>{{ .Params.bio | markdownify }}</p>
 
-	<h2>Projects</h2>
-  {{ range .Params.projects }}
-  <div class="card bg-light text-dark">
-    <div class="card-header">
-      <h5 class="card-title">{{ .title }}</h5>
-    </div>
-    <div class="card-body">
-      <p class="card-text">{{ .description | markdownify }}</p>
-    </div>
-    <div class="card-footer">
-      <a href="{{ .repository }}"><button type="button" class="btn btn-primary btn-block">View Repository</button></a>
-    </div>
-  </div>
-	<br/>
-  {{ end }}
-
-	<h2>Guides</h2>
-  <div class="list-group">
-    {{ range where (where .Site.Pages "Type" "guide") "Draft" false }}
-    <a class="list-group-item list-group-item-action" href="{{ .Permalink }}">{{ .Title }}</a>
-    {{ end }}
-  </div>
-
-	<br />
-
-	<h2>Publications</h2>
-  {{ range .Params.publications }}
-  <div class="card bg-light text-dark">
-    <div class="card-header">
-      <h5 class="card-title">{{ .title }}</h5>
-      <h6 class="card-subtitle mb-2 text-muted">{{ .subtitle }}</h6>
-    </div>
-    <div class="card-body">
-      <p class="card-text">{{ .description | markdownify }}</p>
-    </div>
-    <div class="card-footer">
-      <a href="{{ .shop }}"><button type="button" class="btn btn-primary btn-block">Buy</button></a>
-    </div>
-  </div>
-	<br/>
-  {{ end }}
-
-	<br />
-
-  {{ .Content }}
+	<p>
+		{{ if .Params.gitlab }}<a href="https://gitlab.com/{{ .Params.gitlab }}"><button type="button" class="btn btn-outline-info">gitlab</button></a>{{ end }}
+		{{ if .Params.github }}<a href="https://github.com/{{ .Params.github }}"><button type="button" class="btn btn-outline-info">github</button></a>{{ end }}
+		{{ if .Params.npm }}<a href="https://www.npmjs.com/~{{ .Params.npm }}"><button type="button" class="btn btn-outline-info">npm</button></a>{{ end }}
+		{{ if .Params.pypi }}<a href="https://pypi.org/user/{{ .Params.pypi }}"><button type="button" class="btn btn-outline-info">pypi</button></a>{{ end }}
+		{{ if .Params.bintray }}<a href="https://bintray.com/{{ .Params.bintray }}"><button type="button" class="btn btn-outline-info">bintray</button></a>{{ end }}
+		{{ if .Params.linkedin }}<a href="https://www.linkedin.com/in/{{ .Params.linkedin }}"><button type="button" class="btn btn-outline-info">linkedin</button></a>{{ end }}
+		{{ if .Params.opencollective }}<a href="https://opencollective.com/{{ .Params.opencollective }}"><button type="button" class="btn btn-outline-info">open collective</button></a>{{ end }}
+		{{ if .Params.liberapay }}<a href="https://liberapay.com/{{ .Params.liberapay }}"><button type="button" class="btn btn-outline-info">liberapay</button></a>{{ end }}
+	</p>
 </div>
+
+<h2>Projects</h2>
+{{ range .Params.projects }}
+<div class="card bg-light text-dark">
+  <div class="card-header">
+    <h5 class="card-title">{{ .title }}</h5>
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{ .description | markdownify }}</p>
+  </div>
+  <div class="card-footer">
+    <a href="{{ .repository }}"><button type="button" class="btn btn-primary btn-block">View Repository</button></a>
+  </div>
+</div>
+<br/>
+{{ end }}
+
+<h2>Guides</h2>
+<div class="list-group">
+  {{ range where (where .Site.Pages "Type" "guide") "Draft" false }}
+	<a class="list-group-item list-group-item-action" href="{{ .Permalink }}">{{ .Title }}</a>
+  {{ end }}
+</div>
+<br/>
+
+<h2>Publications</h2>
+{{ range .Params.publications }}
+<div class="card bg-light text-dark">
+  <div class="card-header">
+    <h5 class="card-title">{{ .title }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ .subtitle }}</h6>
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{ .description | markdownify }}</p>
+  </div>
+  <div class="card-footer">
+    <a href="{{ .shop }}"><button type="button" class="btn btn-primary btn-block">Buy</button></a>
+  </div>
+</div>
+<br/>
+{{ end }}
+
+<p>{{ .Content }}</p>
 
 {{ end }}

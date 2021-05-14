@@ -16,12 +16,16 @@
 </head>
 
 <body>
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+	{{ if .IsHome }}
+	{{ else }}
+  <nav class="navbar">
     <a class="navbar-brand" href="/">
-      <img src="{{ $logo.Permalink }}" width="30" height="30" alt="hyper-expanse" class="d-inline-block align-top">
+      <img src="{{ $logo.Permalink }}" width="30" height="30" alt="hyper-expanse" class="align-top">
       {{ .Site.Title }}</a>
   </nav>
+	{{ end }}
 
+	<div id="content">
   {{ block "main" . }}
   <!-- The part of the page that begins to differ between templates -->
   {{ end }}

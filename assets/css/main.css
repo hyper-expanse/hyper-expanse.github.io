@@ -1,28 +1,41 @@
 body {
   background-color: #111215;
   color: white;
-  font-family: unset /* TODO: Remove once I remove Bootstrap. */
 }
 
 @media screen and (prefers-color-scheme: light) {
 	body {
 		background-color: white;
-		color: black
+		color: black;
 	}
 }
 
-*, ::before, ::after {
-	border-sizing: border-box;
+a {
+	text-decoration: none;
 }
 
-.container {
-	margin-left: auto;
-	margin-right: auto;
+.align-top {
+	vertical-align: top !important
 }
 
-#guide {
-  margin-top: 40px;
-  width: 750px;
+.navbar {
+	font-size: 1.25rem;
+}
+
+.navbar a,
+.navbar a:hover,
+.navbar a:focus {
+	color: white;
+}
+
+.navbar-brand {
+	color: white;
+	font-weight: bold;
+}
+
+#content {
+	margin: auto;
+	max-width: 600px
 }
 
 #splash {
@@ -35,16 +48,9 @@ body {
 }
 
 #profile {
-  margin-top: 40px;
-  width: 600px;
+	text-align: center;
 }
 
 #profile img {
   border-radius: 50%;
-  float: left;
-  margin-right: 20px;
-}
-
-#profile .profile_links {
-  margin-top: 50px;
 }
