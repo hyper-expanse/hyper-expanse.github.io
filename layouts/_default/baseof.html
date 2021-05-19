@@ -1,13 +1,11 @@
 {{ $style := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
 {{ $bootstrapStyle := resources.Get "css/bootstrap.css" | resources.Minify | resources.Fingerprint }}
-{{ $logo := resources.Get "images/logo.svg" | resources.Minify }}
+{{ $logo := resources.Get "images/logo.svg" | resources.Minify | resources.Fingerprint }}
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>{{ .Title }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="stylesheet" href="{{ $bootstrapStyle.Permalink }}" integrity="{{ $bootstrapStyle.Data.Integrity }}">
@@ -27,21 +25,22 @@
 		}
 	</style>
 </head>
-
 <body>
-	{{ if .IsHome }}
-	{{ else }}
-  <nav class="navbar">
-    <a class="navbar-brand" href="/">
-      <img src="{{ $logo.Permalink }}" width="30" height="30" alt="hyper-expanse" class="align-top">
-      {{ .Site.Title }}</a>
+	{{ if not .IsHome }}
+  <nav>
+		<header>
+	    <a href="/">
+		    <img src="{{ $logo.Permalink }}" width="30" height="30" alt="hyper-expanse">{{ .Site.Title }}
+			</a>
+		</header>
   </nav>
 	{{ end }}
 
-	<div id="content">
+	<main>
   {{ block "main" . }}
   <!-- The part of the page that begins to differ between templates -->
   {{ end }}
+	</main>
 </body>
 
 </html>

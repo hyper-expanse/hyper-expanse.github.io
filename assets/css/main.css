@@ -2,34 +2,35 @@ a {
 	text-decoration: none;
 }
 
-.align-top {
-	vertical-align: top !important
-}
-
-.navbar {
+nav {
 	font-size: 1.25rem;
+	margin: 10px;
 }
 
-.navbar a,
-.navbar a:hover,
-.navbar a:focus {
+nav a,
+nav a:hover,
+nav a:focus {
 	color: white;
 }
 
-.navbar-brand {
-	color: white;
+nav header {
 	font-weight: bold;
 }
 
-#content {
+nav header img {
+	margin-right: 5px;
+	vertical-align: top !important;
+}
+
+main {
 	margin: auto;
-	max-width: 600px
+	max-width: 700px
 }
 
 #splash {
   background-image: url('/images/logo.min.svg');
   background-position: center;
-  background-size: 25% 25%;
+  background-size: 40% 40%;
   background-attachment: fixed;
   background-repeat: no-repeat;
   height: 100vh;
