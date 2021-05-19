@@ -1,6 +1,6 @@
 {{ $style := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
 {{ $bootstrapStyle := resources.Get "css/bootstrap.css" | resources.Minify | resources.Fingerprint }}
-{{ $logo := resources.Get "images/logo.svg" | resources.Minify | resources.Fingerprint }}
+{{ $logo := resources.Get "images/logo.svg" | resources.Minify }}
 
 <!DOCTYPE html>
 <html lang="en">
