@@ -1,5 +1,4 @@
 {{ $style := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
-{{ $bootstrapStyle := resources.Get "css/bootstrap.css" | resources.Minify | resources.Fingerprint }}
 {{ $logo := resources.Get "images/logo.svg" | resources.Minify }}
 
 <!DOCTYPE html>
@@ -8,7 +7,6 @@
   <meta charset="utf-8">
   <title>{{ .Title }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="stylesheet" href="{{ $bootstrapStyle.Permalink }}" integrity="{{ $bootstrapStyle.Data.Integrity }}">
   <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
   <link rel="icon" type="image/svg+xml" href="{{ $logo.Permalink }}">
 	<style>
