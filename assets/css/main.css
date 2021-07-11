@@ -93,10 +93,6 @@ nav a:focus {
 	color: white;
 }
 
-nav header {
-	font-weight: bold;
-}
-
 nav header img {
 	margin-right: 5px;
 	vertical-align: top !important;
