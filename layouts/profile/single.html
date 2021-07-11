@@ -4,7 +4,7 @@
 {{ $profile := resources.Get $url | resources.Fingerprint }}
 
 <section id="profile">
-	<img src="{{ $profile.Permalink }}" alt="Profile picture of {{ .Title }}" width="150" height="150">
+	<img src="{{ $profile.Permalink }}" alt="Profile picture of {{ .Title }}" width="200" height="200">
 
 	<h1>{{ .Params.title }}</h1>
 

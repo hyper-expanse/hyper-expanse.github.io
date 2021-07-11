@@ -1,7 +1,7 @@
 ---
 title: Hutson Betts
 type: profile
-picture: hutson-profile.png
+picture: hutson-profile.webp
 bio: It's my passion to improve the software engineering experience through advocacy, guidance, and the development of automation tooling.
 github: hutson
 npm: hutson
