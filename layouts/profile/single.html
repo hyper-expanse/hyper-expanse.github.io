@@ -1,7 +1,10 @@
 {{ define "main" }}
 
+{{ $url := print "images/" $.Params.picture }}
+{{ $profile := resources.Get $url | resources.Fingerprint }}
+
 <section id="profile">
-	<img src="/images/{{ .Params.picture }}" alt="Profile picture of {{ .Title }}" width="150" height="150">
+	<img src="{{ $profile.Permalink }}" alt="Profile picture of {{ .Title }}" width="150" height="150">
 
 	<h1>{{ .Params.title }}</h1>
 
